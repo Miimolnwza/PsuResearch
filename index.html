@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/assets/responsive.css">
 <!-- AOS CSS -->
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- magnific.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 <!-- ============================================================ -->
 <!-- JAVA SCRIPT -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -20,12 +22,15 @@
 <!-- type.js -->
 <script src="assets/typed.js-master/lib/typed.min.js"></script>
 <!-- ============================================================ -->
+<!-- magnific zoom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<!-- ============================================================ -->
 </head>
 <body>
 <!-- ========================================================== -->
 <!-- navigation bar -->
 <!-- ========================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="top-nav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="top-nav">
         <a class="navbar-brand" href="#"><img src="https://dorm.psu.ac.th/system/files/images/psu-logo.png" alt="" style="width:50px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -38,6 +43,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#">สถานที่ท่องเที่ยวทั้งหมด</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -46,7 +54,7 @@
 <!-- ========================================================== -->
 <!-- ========================================================== -->
 <!-- go top button -->
-<a href="#top-nav" class="go-top-btn" onclick="topFunction()" id="go-top-btn"><img src="assets/image/top.png" alt="" style="width:50px;border-radius:50px;"></a>
+<a href="#top-nav" class="go-top-btn" id="go-top-btn"><img src="assets/image/top.png" alt="" style="width:50px;border-radius:50px;"></a>
 <!-- ========================================================== -->
 <!-- Header Banner-->
     <header>
@@ -56,9 +64,10 @@
                 <h1>แบบ<span class="typing"></span></h1>
                 <!-- auto typing anime -->
                 <script>
-                                var typed = new Typed('.typing', {
+                var typed = new Typed('.typing', {
                 strings: ["คาร์บอนต่ำ.", "ธรรมชาติ.","ทรัพยากรธรรมชาติ."],loop:true,
                 typeSpeed: 150,
+                backSpeed: 75,
                 });
                 </script>
                 <div class="input-group">
@@ -103,74 +112,37 @@
             </span>
         </div>
         <div class="flex-box">
-            <img src="https://lh3.googleusercontent.com/proxy/jzPpvcFVDiHHsPcNFvcK6d5yUJS23jdazdNtjd0_w06ghYWR0V5bAHaw1EIt6frkWCo2coIsv3BsQQGuZaiYOuy7Dcq0ENzHSfgc0b14WjDxQt-LAQFRolrYBAi2gQQpO2jNJT_O8LdNaugsR3F2eeQDiGtyp9Bbq5scMliYUk_QkEqHMUUGmbSu2f9tQhozD4T460V7bldyGriXS_eo0oWP_NMHHGhyxU4DECLqmtRXmtnzjMYq8HQuMjWiR_jSdJ4TFxFYpJLCHudeaeLza81HmF3yw5uQvZUI" alt="">
+            <img src="data:image/jpeg;base64,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" alt="">
         </div>
     </div>
 </div>
+
 <!-- ========================================================== -->
-<!-- modal พังงา-->
-    <div class="modal fade" id="more-option1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-        </div>
+<!-- photo gallery -->
+<div class="container text-center gallery" id="gallery" data-aos="fade-top" data-aos-duration="2000">
+    <h1>Photo Gallery</h1>
+    <div class="gallery-img-section">
+        <a href="assets/image/image1.jpg" class="gallery-img">
+            <img src="assets/image/image1.jpg" alt="">
+        </a>
+        <a href="assets/image/image2.jpg" class="gallery-img">
+            <img src="assets/image/image2.jpg" alt="">
+        </a>
+        <a href="assets/image/image3.jpg" class="gallery-img">
+            <img src="assets/image/image3.jpg" alt="">
+        </a>
+        <a href="assets/image/image4.jpg" class="gallery-img">
+            <img src="assets/image/image4.jpg" alt="">
+        </a>
+        <a href="assets/image/image5.jpg" class="gallery-img">
+            <img src="assets/image/image5.jpg" alt="">
+        </a>
+        <a href="assets/image/image6.png" class="gallery-img">
+            <img src="assets/image/image6.png" alt="">
+        </a>
+
     </div>
-<!-- End modal พังงา -->
-<!-- modal ตรัง-->
-    <div class="modal fade" id="more-option2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-        </div>
-    </div>
-<!-- End modal ตรัง -->
-<!-- modal พัทลุง-->
-    <div class="modal fade" id="more-option3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">ตรัง</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-            ...
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-        </div>
-    </div>
-<!-- End modal พัทลุง -->
+</div>
 <!-- ========================================================== -->
 <!-- Footer -->
 <div class="footer bg-bluegray">
@@ -179,6 +151,70 @@
     </div>
 </div>
 <!-- ========================================================== -->
+<!-- ========================================================== -->
+<!-- modal พังงา-->
+<div class="modal fade" id="more-option1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- End modal พังงา -->
+<!-- modal ตรัง-->
+<div class="modal fade" id="more-option2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- End modal ตรัง -->
+<!-- modal พัทลุง-->
+<div class="modal fade" id="more-option3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ตรัง</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- End modal พัทลุง -->
 <!-- AOS script -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -199,7 +235,18 @@
         mybutton.style.display = "none";
       }
     }
-
-    </script>
+</script>
+<!-- ========================================================== -->
+<!-- gallery magnific -->
+<script>
+    $(".gallery-img-section").magnificPopup({
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+    })
+</script>
+<!-- ========================================================== -->
 </body>
 </html>

@@ -1,5 +1,33 @@
-@media only screen and (max-width:920px){
+@media only screen and (max-width:960px){
+    header{
+        height:500px;
+    }
+    .gallery-img-section .gallery-img{
+        flex:33.33%;
+    }
+}
+@media only screen and (max-width:768px){
     header{
         height:300px;
+    }
+    .input-group{
+        max-width:480px;
+    }
+    .gallery-img-section .gallery-img{
+        flex:50%;
+    }
+    .text-banner{
+        max-width:480px;
+    }
+}
+@media only screen and (max-width:480px){
+    header{
+        height:300px;
+    }
+    .gallery-img-section .gallery-img{
+        flex:100%;
+    }
+    .text-banner{
+        max-width:350px;
     }
 }
