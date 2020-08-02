@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- ============================================================ -->
+<!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- main CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="/assets/responsive.css">
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- ============================================================ -->
+<!-- JAVA SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- type.js -->
+<script src="assets/typed.js-master/lib/typed.min.js"></script>
+<!-- ============================================================ -->
+</head>
+<body>
+<!-- ========================================================== -->
+<!-- navigation bar -->
+<!-- ========================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="top-nav">
+        <a class="navbar-brand" href="#"><img src="https://dorm.psu.ac.th/system/files/images/psu-logo.png" alt="" style="width:50px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">หน้าหลัก </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">สถานที่ท่องเที่ยวทั้งหมด</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<!-- ========================================================== -->
+<!-- End navigation bar -->
+<!-- ========================================================== -->
+<!-- ========================================================== -->
+<!-- go top button -->
+<a href="#top-nav" class="go-top-btn" onclick="topFunction()" id="go-top-btn"><img src="assets/image/top.png" alt="" style="width:50px;border-radius:50px;"></a>
+<!-- ========================================================== -->
+<!-- Header Banner-->
+    <header>
+        <div class="img-banner"></div>
+            <div class="text-banner">
+                <h1>งานวิจัยแหล่งท่องเที่ยว</h1>
+                <h1>แบบ<span class="typing"></span></h1>
+                <!-- auto typing anime -->
+                <script>
+                                var typed = new Typed('.typing', {
+                strings: ["คาร์บอนต่ำ.", "ธรรมชาติ.","ทรัพยากรธรรมชาติ."],loop:true,
+                typeSpeed: 150,
+                });
+                </script>
+                <div class="input-group">
+                    <select class="custom-select" name="" id="">
+                        <option value="" disabled selected>เลือกจังหวัด</option>
+                        <option value="">พังงา</option>
+                        <option value="">ตรัง</option>
+                        <option value="">พัทลุง</option>
+                    </select>
+                    <input type="submit" class="btn btn-success" data-toggle="modal" data-target="#more-option1" value="ค้นหา">
+            </div>
+        </div>
+    </header>
+<!-- End Header Banner-->
+<!-- ========================================================== -->
+<!-- content -->
+<div class="index-content">
+    <div class="content d-flex flex-row" data-aos="fade-left" data-aos-duration="2000" >
+        <div class="flex-box d-flex align-items-center">
+            <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos quae quaerat ratione maxime consequuntur nisi explicabo praesentium consectetur illo iure magnam, quas nesciunt, non quibusdam. Ab illum repudiandae illo?
+            </span>
+        </div>
+        <div class="flex-box">
+            <img src="https://7greens.tourismthailand.org/wp-content/uploads/2018/10/shutterstock_463417910.jpg" alt="">
+        </div>
+    </div>
+    <div class="content d-flex flex-row-reverse" data-aos="fade-right" data-aos-duration="2000">
+        <div class="flex-box d-flex align-items-center justify-content-center">
+            <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos quae quaerat ratione maxime consequuntur nisi explicabo praesentium consectetur illo iure magnam, quas nesciunt, non quibusdam. Ab illum repudiandae illo?
+            </span>
+        </div>
+        <div class="flex-box d-flex align-items-center">
+            <img src="https://www.dotproperty.co.th/blog/wp-content/uploads/sites/9/2017/02/10488122_297012893836080_4298580482075382853_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="content d-flex flex-row" data-aos="fade-left" data-aos-duration="2000">
+        <div class="flex-box">
+            <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos quae quaerat ratione maxime consequuntur nisi explicabo praesentium consectetur illo iure magnam, quas nesciunt, non quibusdam. Ab illum repudiandae illo?
+            </span>
+        </div>
+        <div class="flex-box">
+            <img src="https://lh3.googleusercontent.com/proxy/jzPpvcFVDiHHsPcNFvcK6d5yUJS23jdazdNtjd0_w06ghYWR0V5bAHaw1EIt6frkWCo2coIsv3BsQQGuZaiYOuy7Dcq0ENzHSfgc0b14WjDxQt-LAQFRolrYBAi2gQQpO2jNJT_O8LdNaugsR3F2eeQDiGtyp9Bbq5scMliYUk_QkEqHMUUGmbSu2f9tQhozD4T460V7bldyGriXS_eo0oWP_NMHHGhyxU4DECLqmtRXmtnzjMYq8HQuMjWiR_jSdJ4TFxFYpJLCHudeaeLza81HmF3yw5uQvZUI" alt="">
+        </div>
+    </div>
+</div>
+<!-- ========================================================== -->
+<!-- modal พังงา-->
+    <div class="modal fade" id="more-option1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- End modal พังงา -->
+<!-- modal ตรัง-->
+    <div class="modal fade" id="more-option2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- End modal ตรัง -->
+<!-- modal พัทลุง-->
+    <div class="modal fade" id="more-option3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ตรัง</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- End modal พัทลุง -->
+<!-- ========================================================== -->
+<!-- Footer -->
+<div class="footer bg-bluegray">
+    <div class="footer-text">
+        @2020 Research. prince of songkla university.
+    </div>
+</div>
+<!-- ========================================================== -->
+<!-- AOS script -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<!-- ========================================================== -->
+<!-- go to top script -->
+<script>
+    //Get the button
+    var mybutton = document.getElementById("go-top-btn");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    </script>
+</body>
+</html>
