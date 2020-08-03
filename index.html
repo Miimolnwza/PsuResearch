@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage - Research</title>
 <!-- ============================================================ -->
 <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -38,13 +38,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">หน้าหลัก </a>
+              <a class="nav-link" href="index.html">หน้าหลัก </a>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link a-dropdown dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  จังหวัดท่องเที่ยวทั้งหมด
+                </a>
+                <div class="a-dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="county.html">จังหวัด พังงา</a>
+                  <a class="dropdown-item" href="#">จังหวัด พัทลุง</a>
+                  <a class="dropdown-item" href="#">จังหวัด ตรัง</a>
+                </div>
+              </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">สถานที่ท่องเที่ยวทั้งหมด</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#gallery">รูปภาพ</a>
             </li>
           </ul>
         </div>
@@ -60,12 +67,12 @@
     <header>
         <div class="img-banner"></div>
             <div class="text-banner">
-                <h1>งานวิจัยแหล่งท่องเที่ยว</h1>
+                <h1>งานวิจัยการท่องเที่ยว</h1>
                 <h1>แบบ<span class="typing"></span></h1>
                 <!-- auto typing anime -->
                 <script>
                 var typed = new Typed('.typing', {
-                strings: ["คาร์บอนต่ำ.", "ธรรมชาติ.","ทรัพยากรธรรมชาติ."],loop:true,
+                strings: ["คาร์บอนต่ำ.", "ไร้ความเร่งรีบ.","เชิงนิเวศ."],loop:true,
                 typeSpeed: 150,
                 backSpeed: 75,
                 });
@@ -85,30 +92,35 @@
 <!-- ========================================================== -->
 <!-- content -->
 <div class="index-content">
-    <div class="content d-flex flex-row" data-aos="fade-left" data-aos-duration="2000" >
-        <div class="flex-box d-flex align-items-center">
-            <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos quae quaerat ratione maxime consequuntur nisi explicabo praesentium consectetur illo iure magnam, quas nesciunt, non quibusdam. Ab illum repudiandae illo?
+    <h1>การท่องเที่ยวรูปแบบต่างๆ</h1>
+    <div class="content" data-aos="fade-left" data-aos-duration="2000" >
+        <div class="flex-box">
+            <h2>การท่องเที่ยวแบบคาร์บอนต่ำ</h2>
+            <span class="content-text">
+                การท่องเที่ยวแบบ การกำหนดโปรแกรมการเดินทาง ตามเส้นทางธรรมชาติต่าง ๆ โดยเฉพาะพื้นที่ป่าชายเลน และมีตัวเลข เป็นค่าคาร์บอนเครดิต นักท่องเที่ยวได้รับรู้ว่าการเดินทางแต่ละโปรแกรม ได้มีส่วนร่วมในการลดก๊าซคาร์บอน เกิดความภาคภูมิใจว่าได้เป็นส่วนหนึ่งในการช่วยดูแลอนุรักษ์ธรรมชาติ	 การท่องเที่ยวคาร์บอนต่ำ จะเป็นการท่องเที่ยวรูปแบบใหม่ ที่เป็นอนาคตของการสนับสนุนการท่องเที่ยวอย่างยั่งยืนได้ต่อไป
             </span>
         </div>
         <div class="flex-box">
             <img src="https://7greens.tourismthailand.org/wp-content/uploads/2018/10/shutterstock_463417910.jpg" alt="">
         </div>
     </div>
-    <div class="content d-flex flex-row-reverse" data-aos="fade-right" data-aos-duration="2000">
-        <div class="flex-box d-flex align-items-center justify-content-center">
-            <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos quae quaerat ratione maxime consequuntur nisi explicabo praesentium consectetur illo iure magnam, quas nesciunt, non quibusdam. Ab illum repudiandae illo?
+    <div class="content-reverse" data-aos="fade-right" data-aos-duration="2000">
+        <div class="flex-box">
+            <h2>การท่องเที่ยวแบบไร้ความเร่งรีบ</h2>
+            <span class="content-text">
+                การท่องเที่ยวที่ไร้ความเร่งรีบ (Slow Life Tourism) หมายถึงการเดินทางท่องเที่ยวเนิบช้า ไร้ความเร่งรีบ เพื่อผ่อนคลายความตึงเครียดและเสริมสร้างพลังงาน โดยให้เวลาและโอกาสในการซึมซับประสบการณ์ระหว่างการเดินทางท่องเที่ยวและที่จุดหมายปลายทางเพื่อการพักผ่อน และเรียนรู้จากธรรมชาติ วิถีชีวิตความเป็นอยู่ของประชาชนในท้องถิ่น โดยเน้นคุณภาพของประสบการณ์ที่ได้รับจากการท่องเที่ยว และพบปะผู้คนในท้องถิ่นและสถานที่ใหม่ รวมทั้งเพื่อลดผลกระทบที่เกิดขึ้นกับสิ่งแวดล้อม
+
             </span>
         </div>
         <div class="flex-box d-flex align-items-center">
             <img src="https://www.dotproperty.co.th/blog/wp-content/uploads/sites/9/2017/02/10488122_297012893836080_4298580482075382853_n.jpg" alt="">
         </div>
     </div>
-    <div class="content d-flex flex-row" data-aos="fade-left" data-aos-duration="2000">
+    <div class="content " data-aos="fade-left" data-aos-duration="2000">
         <div class="flex-box">
-            <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quos quae quaerat ratione maxime consequuntur nisi explicabo praesentium consectetur illo iure magnam, quas nesciunt, non quibusdam. Ab illum repudiandae illo?
+            <h2>การท่องเที่ยวเชิงนิเวศ</h2>
+            <span class="content-text">
+                รูปแบบหนึ่งของการท่องเที่ยวที่มุ่งความสนใจในแหล่งท่องเที่ยวทางธรรมชาติมีความเกี่ยวเนื่องกับระบบนิเวศ ตลอดจนลักษณะทางวัฒนธรรมที่มีอยู่ในพื้นที่แห่งนั้น มีการจัดการที่คำนึงถึงมาตรการในการอนุรักษ์ เพื่อลดผลกระทบที่จะเกิดขึ้นต่อทรัพยากรธรรมชาติและสิ่งแวดล้อม กิจกรรมท่องเที่ยวก่อให้เกิดกระบวนการเรียนรู้ร่วมกันระหว่างผู้ที่มีส่วนเกี่ยวข้อง ในด้านของการสร้างจิตสำนึก การปลูกฝั่งด้านจริยธรรมความรับผิดชอบที่มีทรัพยากรธรรมชาติและสิ่งแวดล้อมในระบบนิเวศ
             </span>
         </div>
         <div class="flex-box">
@@ -120,7 +132,7 @@
 <!-- ========================================================== -->
 <!-- photo gallery -->
 <div class="container text-center gallery" id="gallery" data-aos="fade-top" data-aos-duration="2000">
-    <h1>Photo Gallery</h1>
+    <h1>รวมรูปภาพ</h1>
     <div class="gallery-img-section">
         <a href="assets/image/image1.jpg" class="gallery-img">
             <img src="assets/image/image1.jpg" alt="">
@@ -156,16 +168,21 @@
 <div class="modal fade" id="more-option1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
     <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header bg-success">
         <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
         </div>
         <div class="modal-body">
-        ...
+            <div class="form-group">
+                <label for="location">เลือกส่วนภาค:</label>
+                    <select name="location" class="form-control" id="">
+                        <option value="">บ้านสามช่องเหนือ</option>
+                    </select>
+            </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer ">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
         </div>
@@ -244,7 +261,23 @@
         type:'image',
         gallery:{
             enabled:true
-        }
+        } ,  mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+zoom: {
+  enabled: true, // By default it's false, so don't forget to enable it
+
+  duration: 300, // duration of the effect, in milliseconds
+  easing: 'ease-in-out', // CSS transition easing function
+
+  // The "opener" function should return the element from which popup will be zoomed in
+  // and to which popup will be scaled down
+  // By defailt it looks for an image tag:
+  opener: function(openerElement) {
+    // openerElement is the element on which popup was initialized, in this case its <a> tag
+    // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+    return openerElement.is('img') ? openerElement : openerElement.find('img');
+  }
+}
     })
 </script>
 <!-- ========================================================== -->
