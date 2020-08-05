@@ -35,6 +35,9 @@
 <!-- ============================================================ -->
 </head>
 <body class="county-bg">
+  <!-- go top button -->
+<a href="#top-nav" class="go-top-btn" id="go-top-btn"><img src="assets/image/top.png" alt="" style="width:50px;border-radius:50px;"></a>
+<!-- ========================================================== -->
 <!-- ========================================================== -->
 <!-- navigation bar -->
 <!-- ========================================================== -->
@@ -346,4 +349,20 @@
     }
     
   })
+</script>
+<!-- ========================================================== -->
+<!-- go to top script -->
+<script>
+  //Get the button
+  var mybutton = document.getElementById("go-top-btn");
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
 </script>
