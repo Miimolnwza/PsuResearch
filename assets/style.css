@@ -217,10 +217,10 @@ header{
     transition:.5s;
 }
 .county-detail .left-nav.active{
-    animation: leftnav-active 1s forwards;
+    animation: leftnav-active .5s forwards;
 }
 .county-detail .left-nav.inactive{
-    animation: leftnav-inactive 1s forwards;
+    animation: leftnav-inactive .5s forwards;
 }
 @keyframes leftnav-active{
     0%{
@@ -318,8 +318,14 @@ body.county-bg::before{
 .county-detail .container .block-content{
     padding:20px;
 }
+.county-detail .container .block-content h3::before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f124";
+    padding:10px;
+}
 
-
+.county-detail .container .block-content .sub-event{
+    margin-top:20px;
+}
 /* font awsome */
 .fa-book{
     font-size:28px;
