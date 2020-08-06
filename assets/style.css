@@ -384,14 +384,17 @@ body.county-bg::before{
     margin-right:5px;
 }
 .download-btn:hover .fa-cloud-download-alt{
-    animation:clound-animation .5s infinite;
+    animation:clound-animation 1s infinite;
 }
 @keyframes clound-animation{
     0%{
         transform: translateY(-3px);
     }
-    100%{
+    50%{
         transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-3px);
     }
 }
 
