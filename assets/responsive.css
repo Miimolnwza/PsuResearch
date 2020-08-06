@@ -47,6 +47,9 @@
     .index-content .content .flex-box .content-text, .index-content .content-reverse .flex-box .content-text{
         padding:1rem 1rem;
     }
+    fieldset.scheduler-border{
+        width:100%;
+    }
 }
 @media only screen and (max-width:480px){
     header{

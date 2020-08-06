@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สถานที่ - จังหวัดพังงา</title>
+    <link rel="shortcut icon" href="assets/image/icon.png" />
 <!-- ============================================================ -->
 <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -275,17 +276,24 @@
             <h3>แผนที่: บ้านสามช่องเหนือ</h3>
           </div>
           <div class="content">
-            <a href="https://www.google.com/maps/place/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/@8.3060069,98.417378,17z/data=!3m1!4b1!4m5!3m4!1s0x30505322baee7195:0x916f05c4b1a10439!8m2!3d8.3060069!4d98.4195667?hl=en" target="_blank">
+            <a href="https://goo.gl/maps/7uqyZb9HJBkm96MA9" target="_blank"><div id="map">
+                <img class="map" src="assets/image/map1.png" alt="">
+                <div class="map-text" title="เปิดบน Google MAP">
+                  <h1>เปิดบน Google Maps <br> <img class="mapmarkerimg" src="assets/image/mapmarker.png" alt=""></h1>
+                </div>
+            </div>
+          </a>
+  
+            <!-- 
+            google map api
+              <a href="https://www.google.com/maps/place/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD/@8.3060069,98.417378,17z/data=!3m1!4b1!4m5!3m4!1s0x30505322baee7195:0x916f05c4b1a10439!8m2!3d8.3060069!4d98.4195667?hl=en" target="_blank">
               เปิดใน Google map
               <span class="open-ongoogle">
                 <img src="assets/image/mapmarker.png" alt="">
               </span>
             </a>
-            <div id="map"></div>
-            <script defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiAJlK3WwS6s0_E7nvFQKgPR4J2JQ7Ozs&callback=initMap">
-</script>
-      
+           <div id="map">
+            <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiAJlK3WwS6s0_E7nvFQKgPR4J2JQ7Ozs&callback=initMap"></script>
             <script>
               // Initialize and add the map
               function initMap() {
@@ -297,8 +305,7 @@
                 // The marker, positioned at Uluru
                 var marker = new google.maps.Marker({position: uluru, map: map});
               }
-                  </script>
-                     
+                  </script> -->       
           </div>
         </div>
         <!-- block content 6 -->

@@ -366,7 +366,7 @@ body.county-bg::before{
 .download-btn .front-btn{
     background:#4DD0E1;
     width:100%;
-    height:50px;
+    height:100%;
     line-height: 50px;
     transition: .5s;
 
@@ -374,24 +374,89 @@ body.county-bg::before{
 .download-btn .back-btn{
     background:#81C784;
     width:100%;
-    height:50px;
+    height:100%;
     line-height: 50px;
 }
 .download-btn:hover .front-btn{
     margin-top:-50px;
 }
+.download-btn .fa-cloud-download-alt{
+    margin-right:5px;
+}
+.download-btn:hover .fa-cloud-download-alt{
+    animation:clound-animation .5s infinite;
+}
+@keyframes clound-animation{
+    0%{
+        transform: translateY(-3px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 
-#map {
+#map{
     width: 100%;
     height: 400px;
     background-color: grey;
+    cursor: pointer;
+    /* overflow: hidden; */
+    position: relative;
+    box-sizing: border-box;
+    user-select: none;
+    transition: .5s;
   }
+#map img{
+    width:100%;
+    height:100%;
+    transition: .5s;
+}
+#map:hover .map{
+   opacity: .3;
+   transition: .5s;
+}
+#map:hover .map-text{
+    opacity: 1;
+    transition:  1s;
+}
+#map .map-text{
+    position:absolute;
+    color:white;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    opacity: 0;
+    transition: 1s;
+    text-align: center;
+}
+#map .map-text .mapmarkerimg{
+    width:50px;
+    height:50px;
+    animation: mapmarker 1s  infinite;
 
+}
+@keyframes mapmarker{
+    0%{
+        transform: translateY(8px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(8px);
+    }
+
+}
 /*download file page */
+.download-file .container{
+    height:fit-content
+}
 fieldset.scheduler-border {
+    width:600px;
     border: 1px groove #ddd !important;
     padding: 0 1.4em 1.4em 1.4em !important;
-    margin: 0 0 1.5em 0 !important;
+    margin: 30px auto!important;
     -webkit-box-shadow:  0px 0px 0px 0px #000;
             box-shadow:  0px 0px 0px 0px #000;
 }
@@ -405,17 +470,30 @@ fieldset.scheduler-border {
         border-bottom:none;
     }
     
-.download-file .container h1{
-position: relative;
-width:fit-content;
-margin-bottom:50px;
-}
-.download-file .container h1::after{
+.download-file .header-download-text{
+    position: relative;
+    margin-bottom:50px auto;
+    }
+.download-file .header-download-text::after{
     content:"";
     display:table;
-    background:#81C784;
+    background:black;
     position: absolute;
     bottom:-10px;
-    width:50%;
+    width:100%;
     height:5px;
 }
+/* .download-file .container h1::before{
+    content:"";
+    position: absolute;
+    display:block;
+    background:black;
+    bottom:-18px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    text-align: center;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+} */
