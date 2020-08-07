@@ -455,6 +455,11 @@ body.county-bg::before{
 .download-file .container{
     height:fit-content
 }
+.download-file .header-file span{
+    font-size:22px;
+    font-weight: 800;
+    border-bottom:1px solid black;
+}
 fieldset.scheduler-border {
     width:600px;
     border: 1px groove #ddd !important;
@@ -486,6 +491,7 @@ fieldset.scheduler-border {
     width:100%;
     height:5px;
 }
+
 /* .download-file .container h1::before{
     content:"";
     position: absolute;
