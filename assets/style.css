@@ -140,7 +140,7 @@ header{
     border-radius:6px;
 }
 .gallery-img-section{
-    max-height:500px;
+    max-height:530px;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
