@@ -28,6 +28,28 @@
 <!-- ============================================================ -->
 </head>
 <body>
+<!-- loading-screen -->
+<div class="loading-screen" id="loading-screen">
+    <div class="loading-animation">
+        <div class="loadbar load-bar1"></div>
+        <div class="loadbar load-bar2"></div>
+        <div class="loadbar load-bar3"></div>
+        <div class="loadbar load-bar4"></div>
+        <div class="loadbar load-bar5"></div>
+        <div class="loadbar load-bar6"></div>
+        <div class="loadbar load-bar7"></div>
+        <div class="loadbar load-bar8"></div>
+        <div class="loading-typing">LOADING <span class="loading-dot loading-dot1">.</span>
+            <span class="loading-dot loading-dot2">.</span>
+            <span class="loading-dot loading-dot3">.</span></div>
+    </div>
+</div>
+<script>
+    $(window).on("load",function(){
+      var load_screen = document.getElementById("loading-screen");
+      document.body.removeChild(load_screen);
+    });
+  </script>
 <!-- ========================================================== -->
 <!-- navigation bar -->
 <!-- ========================================================== -->

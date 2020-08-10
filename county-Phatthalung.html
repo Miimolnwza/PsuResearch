@@ -36,36 +36,29 @@
 </head>
 <body class="county-bg">
 
-<!-- loading screen -->
-<!-- ============================================================ -->
-  <!-- <style>
-    .loading-screen{
-      background:black;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      position:fixed;
-      z-index: 9999;
-
-    }
-    .loading-screen .loading-text{
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-      color:white;
-      text-align:center;
-    }
-  </style>
-  <script>
-    $(window).on("load",function(){
-      var load_screen = document.getElementById("load_screen");
-      document.body.removeChild(load_screen);
-    });
-  </script>
-  <div class="loading-screen" id="load_screen"><div class="loading-text"><h1>LOADING...</h1></div></div> -->
-  <!-- END loading screen -->
+<!-- loading-screen -->
+<div class="loading-screen" id="loading-screen">
+  <div class="loading-animation">
+      <div class="loadbar load-bar1"></div>
+      <div class="loadbar load-bar2"></div>
+      <div class="loadbar load-bar3"></div>
+      <div class="loadbar load-bar4"></div>
+      <div class="loadbar load-bar5"></div>
+      <div class="loadbar load-bar6"></div>
+      <div class="loadbar load-bar7"></div>
+      <div class="loadbar load-bar8"></div>
+      <div class="loading-typing">LOADING <span class="loading-dot loading-dot1">.</span>
+          <span class="loading-dot loading-dot2">.</span>
+          <span class="loading-dot loading-dot3">.</span></div>
+  </div>
+</div>
+<script>
+  $(window).on("load",function(){
+    var load_screen = document.getElementById("loading-screen");
+    document.body.removeChild(load_screen);
+  });
+</script>
+<!-- ========================================================== -->
 <!-- ============================================================ -->
   <!-- go top button -->
 <a href="#top-nav" class="go-top-btn" id="go-top-btn"><img src="assets/image/top.png" alt="" style="width:50px;border-radius:50px;"></a>
