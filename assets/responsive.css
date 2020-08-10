@@ -16,6 +16,12 @@
     .index-content .content .flex-box .content-text{
         padding:1rem 3rem;
     }
+    #map-wrap{
+        flex-direction: column;
+    }
+    #map-wrap #map{
+        margin-bottom:30px;
+    }
 
 }
 
