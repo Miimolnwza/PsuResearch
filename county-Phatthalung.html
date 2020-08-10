@@ -520,7 +520,11 @@
               กิจกรรมการท่องเที่ยวที่กระจายตัวชุมชนเกาะหมากมีเส้นทางสำหรับการคมนาคมสะดวกและทั่วถึง การเดินทาง
               จะต้องใช้รถจักรยานเพียงอย่างเดียวเนื่องจากกิจกรรมแต่ละกิจกรรมอยู่ห่างกัน ระหว่างทางก็จะมีร้านค้าริมทาง
               บริการนักท่องเที่ยว
-              <div class="map-event"><img src="assets/image/map-event1.png" alt=""></div>
+              <div class="gallery-img-map mt-4">
+                <a href="assets/image/map-event1.png" class="gallery-img text-center" title="">
+                  <img src="assets/image/map-event1.png" alt="">
+                </a>
+              </div>
               <h5>เส้นทางการท่องเที่ยวที่ 2 เส้นทางการท่องเที่ยวทางบกที่มีชื่อว่า “ปั่นจักรยาน ชมวิถีชุมชนและ
               ทรัพยากรนิเวศเกาะหมาก จังหวัดพัทลุง”</h5>
               เน้นการเรียนรู้ประวัติศาสตร์ของชุมชนและสัมผัสวิถีชีวิตของคนใน
@@ -528,7 +532,11 @@
               ติดขัดการเดินทางสามารถใช้รถและจักรยาน ในการเดินทางไปทำกิจกรรมการท่องเที่ยวยังจุดต่าง ๆ อีกทั้งเส้นทาง
               การท่องเที่ยวเส้นทางนี้เป็นเส้นทางที่ผ่านชุมชนซึ่งสามารถมองเห็นวิถีชุมชนของคนละแวกที่ทำกิจกรรมได้
               นอกจากนี้แล้วยังผ่านธรรมชาติของป่าพรุทะเลสาบสงขลา ภูเขา
-              <div class="map-event"><img src="assets/image/map-event2.png" alt=""></div>
+              <div class="gallery-img-map mt-4">
+                <a href="assets/image/map-event2.png" class="gallery-img text-center" title="">
+                  <img src="assets/image/map-event2.png" alt="">
+                </a>
+              </div>
           </div>
         </div>
 <!-- block content 5 -->
@@ -639,6 +647,25 @@
 <!-- magnific zoom -->
 <script>
   $(".gallery-img-section").magnificPopup({
+      delegate:'a',
+      type:'image',
+      image:{
+        titleSrc:'title'
+      },
+      gallery:{
+          enabled:true
+      } ,  mainClass: 'mfp-with-zoom', 
+zoom: {
+enabled: true, 
+
+duration: 300, 
+easing: 'ease-in-out',
+opener: function(openerElement) {
+  return openerElement.is('img') ? openerElement : openerElement.find('img');
+}
+}
+  })
+  $(".gallery-img-map").magnificPopup({
       delegate:'a',
       type:'image',
       image:{
