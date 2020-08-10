@@ -5,6 +5,9 @@
     .gallery-img-section .gallery-img{
         flex:33.33%;
     }
+    .gallery .gallery-img-section{
+        max-height:100%;
+    }
     .index-content .content,.index-content .content-reverse{
         flex-direction: column-reverse;
         height:fit-content;
