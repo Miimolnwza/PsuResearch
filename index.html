@@ -130,13 +130,7 @@
         </div>
         <div class="modal-body">
             <div class="form-group">
-                <label for="location">เลือกข้อมูลที่ต้องการ</label>
-                <select name="location" class="form-control" id="">
-                    <option value="">รายละเอียด</option>
-                    <option value="">แผนที่</option>
-                    <option value="">โปรแกรมเส้นทางการท่องเที่ยว</option>
-                    <option value="">ผลงานวิจัย</option>
-                </select>
+                <div id="modalcontent"></div>
             </div>
         </div>
         <div class="modal-footer ">
@@ -147,6 +141,8 @@
     </div>
 </div>
 <!-- End modal พังงา -->
+<!-- ===================================================================== -->
+<!-- script show select option base on county -->
 <script>
     $(document).ready(function(){
         // enabled button when select county
@@ -158,20 +154,43 @@
         });
         // show modal
       $('#searchbtn').on('click',function(){
+          var modal_content = '<label for="location">เลือกข้อมูลที่ต้องการ</label>';
           var select = $('#county-select').val();
             if(select == 1){
                 $('#more-option1 #modal-name').html("พังงา");
+                modal_content += '<select name="location" class="form-control" id="">';
+                modal_content +=' <option value="">รายละเอียด</option>';
+                modal_content +='<option value="">แผนที่</option>';
+                modal_content +='<option value="">โปรแกรมเส้นทางการท่องเที่ยว</option>';
+                modal_content +='<option value="">ผลงานวิจัย</option>';
+                modal_content +='</select>';
             }else if (select == 2){
                 $('#more-option1 #modal-name').html("ตรัง");
+                modal_content += '<select name="location" class="form-control" id="">';
+                modal_content +=' <option value="">รายละเอียด</option>';
+                modal_content +='<option value="">ทรัพยากรนิเวศของชุมชนเกาะหมาก</option>';
+                modal_content +='<option value="">เส้นทาง และ แผนที่การท่องเที่ยว</option>';
+                modal_content +='<option value="">แผนที่เกาะหมาก</option>';
+                modal_content +='<option value="">ผลงานวิจัย</option>';
+                modal_content +='</select>';
             }else if (select == 3){
                 $('#more-option1 #modal-name').html("พัทลุง");
+                modal_content += '<select name="location" class="form-control" id="">';
+                modal_content +=' <option value="">รายละเอียด</option>';
+                modal_content +='<option value="">แผนที่</option>';
+                modal_content +='<option value="">โปรแกรมเส้นทางการท่องเที่ยว</option>';
+                modal_content +='<option value="">ผลงานวิจัย</option>';
+                modal_content +='</select>';
             }
+            $('#modalcontent').html(modal_content);
          
           $('#more-option1').modal('show');
 
       })
     });
 </script>
+<!--  END script show select option base on county -->
+<!-- ===================================================================== -->
 <!-- End Header Banner-->
 <!-- ========================================================== -->
 <!-- content -->
