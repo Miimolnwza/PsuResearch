@@ -96,8 +96,8 @@
     <header>
         <div class="img-banner"></div>
             <div class="text-banner">
-                <h1>งานวิจัยการท่องเที่ยว</h1>
-                <h1>แบบ<span class="typing"></span></h1>
+                <div style="user-select: none;"> <h1>งานวิจัยการท่องเที่ยว</h1>
+                    <h1>แบบ<span class="typing"></span></h1></div>
                 <!-- auto typing anime -->
                 <script>
                 var typed = new Typed('.typing', {
@@ -107,16 +107,71 @@
                 });
                 </script>
                 <div class="input-group">
-                    <select class="custom-select" name="" id="">
-                        <option value="" disabled selected>เลือกจังหวัด</option>
-                        <option value="">พังงา</option>
-                        <option value="">ตรัง</option>
-                        <option value="">พัทลุง</option>
+                    <select class="custom-select" name="county-select" id="county-select">
+                        <option value="0" disabled selected>เลือกจังหวัด</option>
+                        <option value="1">พังงา</option>
+                        <option value="2">ตรัง</option>
+                        <option value="3">พัทลุง</option>
                     </select>
-                    <input type="submit" class="btn btn-success" data-toggle="modal" data-target="#more-option1" value="ค้นหา">
+                    <input type="submit" class="btn btn-success" id="searchbtn" value="ค้นหา" disabled>
+                </div>
+            </div>
+    </header>
+<!-- ========================================================== -->
+<!-- modal พังงา-->
+<div class="modal fade" id="more-option1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bg-success">
+        <h5 class="modal-title" id="modal-name">พังงา</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="location">เลือกข้อมูลที่ต้องการ</label>
+                <select name="location" class="form-control" id="">
+                    <option value="">รายละเอียด</option>
+                    <option value="">แผนที่</option>
+                    <option value="">โปรแกรมเส้นทางการท่องเที่ยว</option>
+                    <option value="">ผลงานวิจัย</option>
+                </select>
             </div>
         </div>
-    </header>
+        <div class="modal-footer ">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+        <button type="button" class="btn btn-primary" >ค้นหา</button>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- End modal พังงา -->
+<script>
+    $(document).ready(function(){
+        // enabled button when select county
+        $('#county-select').on('change',function(){
+            var select = $(this).val();
+            if(select != 0){
+                $('#searchbtn').attr('disabled',false);
+            }
+        });
+        // show modal
+      $('#searchbtn').on('click',function(){
+          var select = $('#county-select').val();
+            if(select == 1){
+                $('#more-option1 #modal-name').html("พังงา");
+            }else if (select == 2){
+                $('#more-option1 #modal-name').html("ตรัง");
+            }else if (select == 3){
+                $('#more-option1 #modal-name').html("พัทลุง");
+            }
+         
+          $('#more-option1').modal('show');
+
+      })
+    });
+</script>
 <!-- End Header Banner-->
 <!-- ========================================================== -->
 <!-- content -->
@@ -192,78 +247,7 @@
     </div>
 </div>
 <!-- ========================================================== -->
-<!-- ========================================================== -->
-<!-- modal พังงา-->
-<div class="modal fade" id="more-option1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header bg-success">
-        <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-            <div class="form-group">
-                <label for="location">เลือกข้อมูลที่ต้องการ</label>
-                <select name="location" class="form-control" id="">
-                    <option value="">รายละเอียด</option>
-                    <option value="">แผนที่</option>
-                    <option value="">โปรแกรมเส้นทางการท่องเที่ยว</option>
-                    <option value="">ผลงานวิจัย</option>
-                </select>
-            </div>
-        </div>
-        <div class="modal-footer ">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
-        <button type="button" class="btn btn-primary" >ค้นหา</button>
-        </div>
-    </div>
-    </div>
-</div>
-<!-- End modal พังงา -->
-<!-- modal ตรัง-->
-<div class="modal fade" id="more-option2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">พังงา</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-        ...
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-    </div>
-    </div>
-</div>
-<!-- End modal ตรัง -->
-<!-- modal พัทลุง-->
-<div class="modal fade" id="more-option3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">ตรัง</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-        ...
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-    </div>
-    </div>
-</div>
-<!-- End modal พัทลุง -->
+
 <!-- AOS script -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
