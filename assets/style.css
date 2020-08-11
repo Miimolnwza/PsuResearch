@@ -1,6 +1,10 @@
 html{
     scroll-behavior: smooth;
     box-sizing: border-box;
+
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Sriracha', cursive;
 }
 .navbar{
     z-index: 9999;
@@ -98,6 +102,7 @@ html{
     display:none;
     width:100%;
     text-align:center;
+    
 }
 .a-dropdown-menu .dropdown-item:hover{
     background:#c7c7c7;
